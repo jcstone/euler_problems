@@ -1,20 +1,18 @@
 #What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 def smallest_multiple 
-	result = 1
-	i = 1
-	while i < 10
-		if result % i == 0
-			result = i
-			i += 1
+	counter, current, results = 1, 1, 0
+	until counter > 20  do
+		if current % counter == 0
+			counter += 1
+			results = current
 		else
-			result += 1exit
-			
-			i -= 1
+			counter = 1
+			current += 1
 		end
-		puts i
+		#puts current
 	end
-	return result
+	return results
 end
 
 puts smallest_multiple
