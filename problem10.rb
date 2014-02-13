@@ -17,7 +17,6 @@ class SumPrimes
     result = 0
     for i in 2...number
       if is_prime?(i)
-        #puts i
         result += i
       end
     end
